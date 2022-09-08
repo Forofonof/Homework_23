@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 9, 9, 8, 8, 30};
+        int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 9, 22, 23, 24, 10, 10, 10, 28, 29, 30};
         int repeatNumber = 0;
         int repetitionNumber = 0;
         int counter = 1;
@@ -23,6 +23,9 @@ internal class Program
             {
                 repeatNumber = array[i - 1];
                 repetitionNumber = counter;
+            }
+            else if (array[i] != array[i - 1] && repetitionNumber > counter)
+            {
                 counter = 1;
             }
         }
